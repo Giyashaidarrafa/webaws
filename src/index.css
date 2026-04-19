@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-brand-primary: #1d4ed8; /* Blue 700 */
+  --color-brand-dark: #0f172a;    /* Slate 900 */
+  --color-brand-light: #f8fafc;   /* Gray 50 (Slate 50 is #f8fafc) */
+  --color-brand-border: #e2e8f0;  /* Slate 200 */
+  --color-brand-accent: #3b82f6;  /* Blue 500 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-brand-light text-slate-900 antialiased selection:bg-brand-primary selection:text-white font-sans;
+  }
+}
+
+.fade-in-section {
+  @apply transition-all duration-700;
+}
+
+.nav-link-active {
+  @apply text-brand-primary border-b-2 border-brand-primary;
+}
